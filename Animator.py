@@ -9,7 +9,7 @@ class Animation:
         self.strip = Adafruit_DotStar(numpixels, 12000000)
         self.strip.begin()
 
-        self.strip.setBrightness(self.brightness)
+        self.strip.setBrightness(brightness)
     
     def animateFromArray(self, data):
         self.data = data
