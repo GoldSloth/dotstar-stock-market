@@ -1,7 +1,7 @@
 import time
 from dotstar import Adafruit_DotStar
 
-def Color(red, green, blue, white=0):
+def Colour(red, green, blue, white=0):
     return int((white * pow(2, 24)) + (red * pow(2, 16)) + (green * pow(2, 8)) + blue)
 
 class Animation:
@@ -17,7 +17,7 @@ class Animation:
     def animateFromArray(self, data):
         self.data = data
         for pixelNum in range(len(self.data)):
-            pixelColor = Color(self.data[pixelNum][0] * 255, self.data[pixelNum][1] * 255, self.data[pixelNum][2] * 255)
+            pixelColor = Colour(self.data[pixelNum][0] * 255, self.data[pixelNum][1] * 255, self.data[pixelNum][2] * 255)
             self.strip.setPixelColor(pixelNum, pixelColor)
             self.strip.show()
             time.sleep(self.delay_time)
