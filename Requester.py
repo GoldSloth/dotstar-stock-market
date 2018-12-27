@@ -14,7 +14,7 @@ class Requester:
 
     def getMarketAverageColours(self):
         marketAverages = []
-        for time in self.marketData:
+        for time in self.marketData[0:30]:
             marketAverages.append(time["marketAverage"])
 
         minValue = min(marketAverages)
