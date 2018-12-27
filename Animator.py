@@ -1,6 +1,9 @@
 import time
 from dotstar import Adafruit_DotStar
 
+def Color(red, green, blue, white=0):
+    return int((white * pow(2, 24)) + (red * pow(2, 16)) + (green * pow(2, 8)) + blue)
+
 class Animation:
     def __init__(self, numpixels, delay_time=0.02, brightness=16):
         self.numpixels = numpixels
