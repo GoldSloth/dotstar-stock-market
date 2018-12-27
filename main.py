@@ -8,7 +8,7 @@ aapl = Requester.Requester("", "")
 coloursArray = aapl.getMarketAverageColours()
 
 try:
-    strip = Animator.Animation(numberOfPixels, delay_time=1)
+    strip = Animator.Animation(numberOfPixels, delay_time=0.5)
 
     strip.animateFromArray(coloursArray[0:30])
 
