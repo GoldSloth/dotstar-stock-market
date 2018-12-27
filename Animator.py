@@ -15,9 +15,8 @@ class Animation:
         self.strip.setBrightness(brightness)
     
     def animateFromArray(self, data):
-        self.data = data
-        for pixelNum in range(len(self.data)):
-            pixelColor = Colour(self.data[pixelNum][0] * 255, self.data[pixelNum][1] * 255, self.data[pixelNum][2] * 255)
+        for pixelNum in range(len(data)):
+            pixelColor = Colour(255, data[pixelNum] * 255, data[pixelNum] * 255)
             self.strip.setPixelColor(pixelNum, pixelColor)
             self.strip.show()
             time.sleep(self.delay_time)
