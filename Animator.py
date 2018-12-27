@@ -20,6 +20,7 @@ class Animation:
             pixelColor = Color(self.data[pixelNum][0] * 255, self.data[pixelNum][1] * 255, self.data[pixelNum][2] * 255)
             self.strip.setPixelColor(pixelNum, pixelColor)
             self.strip.show()
+            time.sleep(self.delay_time)
     
     def stop(self):
         self.strip.clear()
