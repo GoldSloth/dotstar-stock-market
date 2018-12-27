@@ -10,7 +10,7 @@ coloursArray = aapl.getMarketAverageColours()
 try:
     strip = Animator.Animation(numberOfPixels, delay_time=1)
 
-    strip.animateFromArray(coloursArray[:30])
+    strip.animateFromArray(coloursArray[0:30])
 
     strip.stop()
 
