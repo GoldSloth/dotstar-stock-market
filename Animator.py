@@ -14,7 +14,7 @@ class Animation:
     def animateFromArray(self, data):
         for pixelNum in range(len(data)):
             print([255, data[pixelNum] * 255, data[pixelNum] * 255])
-            self.strip.setPixelColor(pixelNum, 255, int(data[pixelNum] * 255), int(data[pixelNum] * 255))
+            self.strip.setPixelColor(pixelNum, int(data[pixelNum] * 255), 255, int(data[pixelNum] * 255))
             self.strip.show()
             time.sleep(self.delay_time)
     
