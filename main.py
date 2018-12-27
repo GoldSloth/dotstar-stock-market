@@ -1,5 +1,4 @@
 import Requester
 
 aapl = Requester.Requester("", "")
-
-aapl.getData()
+print(aapl.getMarketAverageColours())
