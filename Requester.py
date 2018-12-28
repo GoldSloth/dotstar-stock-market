@@ -9,7 +9,9 @@ class Requester:
         self.getData()
 
     def getData(self):
-        request = requests.get("https://api.iextrading.com/1.0/stock/{}/chart/date/{}".format(self.ticker, self.date))
+        requestURL = "https://api.iextrading.com/1.0/stock/{}/chart/date/{}".format(self.ticker, self.date)
+        print(requestURL)
+        request = requests.get(requestURL)
         self.marketData = json.loads(request.text)
 
     def getMarketAverageColours(self):
