@@ -4,7 +4,7 @@ import math
 
 numberOfPixels = 30
 
-aapl = Requester.Requester("aapl", "20181228")
+aapl = Requester.Requester("aapl", "20181227")
 coloursArray = aapl.getMarketAverageColours()
 
 try:
