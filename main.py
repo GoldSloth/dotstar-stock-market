@@ -4,11 +4,11 @@ import math
 
 numberOfPixels = 30
 
-aapl = Requester.Requester("20181227", "aapl")
+aapl = Requester.Requester("20181226", "aapl")
 coloursArray = aapl.getMarketAverageColours()
 
 try:
-    strip = Animator.Animation(numberOfPixels, delay_time=0.01)
+    strip = Animator.Animation(numberOfPixels, delay_time=0.1)
 
     strip.animateFromArray(coloursArray)
 
