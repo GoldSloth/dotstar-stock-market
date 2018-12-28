@@ -9,12 +9,12 @@ class Requester:
         self.getData()
 
     def getData(self):
-        request = requests.get("https://api.iextrading.com/1.0/stock/aapl/chart/date/20181226")
+        request = requests.get("https://api.iextrading.com/1.0/stock/{}/chart/date/{}".format(self.ticker, self.date))
         self.marketData = json.loads(request.text)
 
     def getMarketAverageColours(self):
         marketAverages = []
-        for time in self.marketData[0:30]:
+        for time in self.marketData:
             marketAverages.append(time["marketAverage"])
 
         minValue = min(marketAverages)
